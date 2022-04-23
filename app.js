@@ -20,12 +20,8 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/ggez", (req, res) => {
-    res.send('Fuck You');
-});
-
 productRouter.route("/").get((req, res) => {
-    res.send('All');
+    res.render('product');
 });
 
 productRouter.route("/1").get((req, res) => {
