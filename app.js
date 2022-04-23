@@ -5,19 +5,24 @@ const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, '/public/')));
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => {
-    res.send('Hello Phongsak.');
+    res.render('index', {
+        username: "Phongsak",
+        "customer": ["phongsak", "yotsaodee", "mii"]
+    });
 });
 
 app.get("/ggez", (req, res) => {
-    res.send('GGEZzzzzzzzzzzzz');
+    res.send('Fuck You');
 });
 
-app.listen(port, () => {
-    console.log('listening on port' + chalk.green(":" + port));
+app.listen(PORT, () => {
+    console.log('listening on port' + chalk.green(":" + PORT));
 });
