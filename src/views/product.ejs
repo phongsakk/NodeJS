@@ -136,9 +136,11 @@
             <div>
                 <ul>
                     <% products.forEach(product=> { %>
-                        <a href="/products/<%= product.productID %> ">
-                            <%= product.productTitle %> ( <%= product.productPrice %> THB)
-                        </a>
+                        <li>
+                            <a href="/products/<%= product.productID %> ">
+                                <%= product.productTitle %> (<%= product.productPrice %>THB)
+                            </a>
+                        </li>
                         <% }) %>
                 </ul>
             </div>
