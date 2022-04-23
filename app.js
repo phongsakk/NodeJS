@@ -21,7 +21,21 @@ app.get("/", (req, res) => {
 });
 
 productRouter.route("/").get((req, res) => {
-    res.render('product');
+    res.render('product', {
+        "products": [{
+            "productID": 1,
+            "productTitle": "Phongsak",
+            "productPrice": 200
+        }, {
+            "productID": 2,
+            "productTitle": "Yotsaodee",
+            "productPrice": 300
+        }, {
+            "productID": 3,
+            "productTitle": "Mii",
+            "productPrice": 50
+        }]
+    });
 });
 
 productRouter.route("/1").get((req, res) => {
