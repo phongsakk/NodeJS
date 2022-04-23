@@ -23,11 +23,16 @@ app.get("/", (req, res) => {
 });
 
 productRouter.route("/").get((req, res) => {
-    res.render('product', products);
+    res.render('products', {
+        products: products
+    });
 });
 
-productRouter.route("/1").get((req, res) => {
-    res.send('Product 1');
+productRouter.route("/:id").get((req, res) => {
+    const id = req.params.id;
+    res.render('product', {
+        product: products[id],
+    });
 });
 
 app.use("/products", productRouter);

@@ -8,12 +8,12 @@
     <title>
         Play | Free Tailwind CSS Template for Startup and SaaS By TailGrids
     </title>
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../assets/css/animate.css" />
-    <link rel="stylesheet" href="../assets/css/tailwind.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
 
     <!-- ==== WOW JS ==== -->
-    <script src="../assets/js/wow.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
@@ -26,7 +26,7 @@
             <div class="relative -mx-4 flex items-center justify-between">
                 <div class="w-60 max-w-full px-4">
                     <a href="index.html" class="navbar-logo block w-full py-5">
-                        <img src="../assets/images/logo/logo-white.svg" alt="logo" class="header-logo w-full" />
+                        <img src="assets/images/logo/logo-white.svg" alt="logo" class="header-logo w-full" />
                     </a>
                 </div>
                 <div class="flex w-full items-center justify-between px-4">
@@ -135,11 +135,13 @@
         <div class="container">
             <div>
                 <ul>
-                    <li>
-                        <a href="/products/<%= product.productID %> ">
-                            <%= product.productTitle %> (<%= product.productPrice %>THB)
-                        </a>
-                    </li>
+                    <% products.forEach(product=> { %>
+                        <li>
+                            <a href="/products/<%= product.productID %> ">
+                                <%= product.productTitle %> (<%= product.productPrice %>THB)
+                            </a>
+                        </li>
+                        <% }) %>
                 </ul>
             </div>
         </div>
@@ -153,7 +155,7 @@
                 <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
                     <div class="mb-10 w-full">
                         <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
-                            <img src="../assets/images/logo/logo-white.svg" alt="logo" class="max-w-full" />
+                            <img src="assets/images/logo/logo-white.svg" alt="logo" class="max-w-full" />
                         </a>
                         <p class="mb-7 text-base text-[#f3f4fe]">
                             We create digital experiences for brands and companies by using
@@ -293,37 +295,37 @@
                             <li>
                                 <a href="https://tailgrids.com" rel="nofollow noopner" target="_blank"
                                     class="mb-6 mr-5 block max-w-[120px] xl:max-w-[100px] 2xl:max-w-[120px]">
-                                    <img src="../assets/images/footer/brands/tailgrids.svg" alt="tailgrids" />
+                                    <img src="assets/images/footer/brands/tailgrids.svg" alt="tailgrids" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://ayroui.com" rel="nofollow noopner" target="_blank"
                                     class="mb-6 mr-5 block max-w-[120px] xl:max-w-[100px] 2xl:max-w-[120px]">
-                                    <img src="../assets/images/footer/brands/ayroui.svg" alt="ayroui" />
+                                    <img src="assets/images/footer/brands/ayroui.svg" alt="ayroui" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://ecommercehtml.com" rel="nofollow noopner" target="_blank"
                                     class="mb-6 mr-5 block max-w-[120px] xl:max-w-[100px] 2xl:max-w-[120px]">
-                                    <img src="../assets/images/footer/brands/ecommerce-html.svg" alt="ecommerce-html" />
+                                    <img src="assets/images/footer/brands/ecommerce-html.svg" alt="ecommerce-html" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://graygrids.com" rel="nofollow noopner" target="_blank"
                                     class="mb-6 mr-5 block max-w-[120px] xl:max-w-[100px] 2xl:max-w-[120px]">
-                                    <img src="../assets/images/footer/brands/graygrids.svg" alt="graygrids" />
+                                    <img src="assets/images/footer/brands/graygrids.svg" alt="graygrids" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://lineicons.com" rel="nofollow noopner" target="_blank"
                                     class="mb-6 mr-5 block max-w-[120px] xl:max-w-[100px] 2xl:max-w-[120px]">
-                                    <img src="../assets/images/footer/brands/lineicons.svg" alt="lineicons" />
+                                    <img src="assets/images/footer/brands/lineicons.svg" alt="lineicons" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://uideck.com" rel="nofollow noopner" target="_blank"
                                     class="mb-6 mr-5 block max-w-[120px] xl:max-w-[100px] 2xl:max-w-[120px]">
-                                    <img src="../assets/images/footer/brands/uideck.svg" alt="uideck" />
+                                    <img src="assets/images/footer/brands/uideck.svg" alt="uideck" />
                                 </a>
                             </li>
                         </ul>
@@ -367,11 +369,11 @@
 
         <div>
             <span class="absolute left-0 top-0 z-[-1]">
-                <img src="../assets/images/footer/shape-1.svg" alt="" />
+                <img src="assets/images/footer/shape-1.svg" alt="" />
             </span>
 
             <span class="absolute bottom-0 right-0 z-[-1]">
-                <img src="../assets/images/footer/shape-3.svg" alt="" />
+                <img src="assets/images/footer/shape-3.svg" alt="" />
             </span>
 
             <span class="absolute top-0 right-0 z-[-1]">
@@ -538,7 +540,7 @@
 
     <!-- ====== All Scripts -->
 
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         // ==== for menu scroll
         const pageLink = document.querySelectorAll(".ud-menu-scroll");

@@ -1,24 +1,22 @@
-{
-    "products": [
-        {
-            "productID": 1,
-            "productTitle": "Phongsak",
-            "productPrice": 200
-        },
-        {
-            "productID": 2,
-            "productTitle": "Yotsaodee",
-            "productPrice": 300
-        },
-        {
-            "productID": 3,
-            "productTitle": "Mii",
-            "productPrice": 50
-        },
-        {
-            "productID": 4,
-            "productTitle": "Notebook",
-            "productPrice": 2000
-        }
-    ]
-}
+[
+    {
+        "productID": 0,
+        "productTitle": "Phongsak",
+        "productPrice": 200
+    },
+    {
+        "productID": 1,
+        "productTitle": "Yotsaodee",
+        "productPrice": 300
+    },
+    {
+        "productID": 2,
+        "productTitle": "Mii",
+        "productPrice": 50
+    },
+    {
+        "productID": 3,
+        "productTitle": "Notebook",
+        "productPrice": 2000
+    }
+]
