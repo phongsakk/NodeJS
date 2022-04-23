@@ -8,6 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const productRouter = express.Router();
 
+const products = require('./src/data/products.json');
+
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, '/public/')));
 app.set('views', './src/views');
@@ -21,21 +23,7 @@ app.get("/", (req, res) => {
 });
 
 productRouter.route("/").get((req, res) => {
-    res.render('product', {
-        "products": [{
-            "productID": 1,
-            "productTitle": "Phongsak",
-            "productPrice": 200
-        }, {
-            "productID": 2,
-            "productTitle": "Yotsaodee",
-            "productPrice": 300
-        }, {
-            "productID": 3,
-            "productTitle": "Mii",
-            "productPrice": 50
-        }]
-    });
+    res.render('product', products);
 });
 
 productRouter.route("/1").get((req, res) => {
