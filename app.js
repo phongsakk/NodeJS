@@ -6,6 +6,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+const productRouter = express.Router();
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, '/public/')));
@@ -23,9 +24,15 @@ app.get("/ggez", (req, res) => {
     res.send('Fuck You');
 });
 
-app.get("/products", (req, res) => {
-    res.send('Fuck You');
+productRouter.route("/").get((req, res) => {
+    res.send('All');
 });
+
+productRouter.route("/1").get((req, res) => {
+    res.send('Product 1');
+});
+
+app.use("/products", productRouter);
 
 app.listen(PORT, () => {
     console.log('listening on port' + chalk.green(":" + PORT));
