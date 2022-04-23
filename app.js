@@ -23,6 +23,10 @@ app.get("/ggez", (req, res) => {
     res.send('Fuck You');
 });
 
+app.get("/products", (req, res) => {
+    res.send('Fuck You');
+});
+
 app.listen(PORT, () => {
     console.log('listening on port' + chalk.green(":" + PORT));
 });
